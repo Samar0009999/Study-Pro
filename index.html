@@ -1,372 +1,72 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StudyPro Class 9</title>
-
-<style>
-*{box-sizing:border-box}
-
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f4f7ff;
-    color:#222;
-}
-
-.header{
-    background:#3157d5;
-    color:white;
-    text-align:center;
-    padding:25px 15px;
-}
-
-.header h1{
-    margin:0 0 8px;
-    font-size:30px;
-}
-
-.header p{
-    margin:0;
-    font-size:17px;
-}
-
-.container{
-    max-width:650px;
-    margin:auto;
-    padding:18px;
-}
-
-.title{
-    text-align:center;
-    margin:10px 0 18px;
-}
-
-.start{
-    width:100%;
-    padding:17px;
-    border:0;
-    border-radius:14px;
-    background:#ffb300;
-    font-size:19px;
-    font-weight:bold;
-    margin-bottom:18px;
-}
-
-.subjects{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-}
-
-button{
-    border:0;
-    border-radius:13px;
-    padding:16px;
-    font-size:17px;
-    background:white;
-    box-shadow:0 3px 9px #c9cdd8;
-    cursor:pointer;
-}
-
-.subject{
-    min-height:75px;
-    font-weight:bold;
-}
-
-.subject:active,
-.chapter:active{
-    transform:scale(.97);
-}
-
-.chapter{
-    width:100%;
-    margin:7px 0;
-    text-align:left;
-}
-
-.back{
-    width:100%;
-    margin-top:15px;
-    background:#3157d5;
-    color:white;
-}
-
-.note{
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 3px 10px #c9cdd8;
-    line-height:1.7;
-}
-
-.note h2{
-    color:#3157d5;
-}
-
-.hidden{
-    display:none;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 9 Maths - Chapter 1: Number Systems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 5px;
+        }
+        ul {
+            background: #eef7fc;
+            padding: 15px 30px;
+            border-radius: 5px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #d35400;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="header">
-    <h1>StudyPro</h1>
-    <p>नमस्ते Student, आज क्या पढ़ना है?</p>
-</div>
-
 <div class="container">
+    <h1>Class 9th Maths - NCERT</h1>
+    <h2>Chapter 1: Number Systems (संख्या पद्धति)</h2>
 
-<button class="start" onclick="showSubjects()">
-    पढ़ाई शुरू करें
-</button>
+    <h3>1. Types of Numbers (संख्याओं के प्रकार):</h3>
+    <ul>
+        <li><span class="highlight">Natural Numbers (प्राकृतिक संख्याएं - N):</span> 1, 2, 3, 4, 5 ...</li>
+        <li><span class="highlight">Whole Numbers (पूर्ण संख्याएं - W):</span> 0, 1, 2, 3, 4 ...</li>
+        <li><span class="highlight">Integers (पूर्णांक - Z):</span> ... -3, -2, -1, 0, 1, 2, 3 ...</li>
+        <li><span class="highlight">Rational Numbers (परिमेय संख्याएं - Q):</span> Jo numbers <b>p/q</b> ke form me likhe ja sake, jahan q ≠ 0 ho. (Example: 1/2, 3/4, 5)</li>
+        <li><span class="highlight">Irrational Numbers (अपरिमेय संख्याएं):</span> Jo p/q ke form me nahi likhe ja sakte. (Example: √2, √3, π)</li>
+    </ul>
 
-<div id="main">
-
-<h2 class="title">Class 9 - विषय चुनें</h2>
-
-<div class="subjects">
-
-<button class="subject" onclick="openSubject('math')">
-    Mathematics
-</button>
-
-<button class="subject" onclick="openSubject('science')">
-    Science
-</button>
-
-<button class="subject" onclick="openSubject('sst')">
-    Social Science
-</button>
-
-<button class="subject" onclick="openSubject('hindi')">
-    Hindi
-</button>
-
-<button class="subject" onclick="openSubject('english')">
-    English
-</button>
-
+    <h3>2. Important Formulas (घातांक नियम):</h3>
+    <ul>
+        <li>a<sup>m</sup> × a<sup>n</sup> = a<sup>(m + n)</sup></li>
+        <li>(a<sup>m</sup>)<sup>n</sup> = a<sup>(m × n)</sup></li>
+        <li>a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>(m - n)</sup></li>
+        <li>a<sup>m</sup> × b<sup>m</sup> = (a × b)<sup>m</sup></li>
+        <li>a<sup>0</sup> = 1</li>
+    </ul>
 </div>
-
-<div id="chapters"></div>
-
-</div>
-</div>
-
-<script>
-
-function showSubjects(){
-    document.getElementById("main").scrollIntoView({
-        behavior:"smooth"
-    });
-}
-
-const data = {
-
-math:{
-title:"Class 9 Mathematics",
-chapters:[
-"संख्या पद्धति",
-"बहुपद",
-"निर्देशांक ज्यामिति",
-"दो चरों वाले रैखिक समीकरण",
-"यूक्लिड की ज्यामिति का परिचय",
-"रेखाएँ और कोण",
-"त्रिभुज",
-"चतुर्भुज",
-"समांतर चतुर्भुज और त्रिभुजों के क्षेत्रफल",
-"वृत्त",
-"रचनाएँ",
-"हीरोन का सूत्र",
-"पृष्ठीय क्षेत्रफल और आयतन",
-"सांख्यिकी",
-"प्रायिकता"
-]},
-
-science:{
-title:"Class 9 Science",
-chapters:[
-"हमारे आस-पास के पदार्थ",
-"क्या हमारे आस-पास के पदार्थ शुद्ध हैं?",
-"परमाणु एवं अणु",
-"परमाणु की संरचना",
-"जीवन की मौलिक इकाई",
-"ऊतक",
-"गति",
-"बल तथा गति के नियम",
-"गुरुत्वाकर्षण",
-"कार्य तथा ऊर्जा",
-"ध्वनि",
-"खाद्य संसाधनों में सुधार"
-]},
-
-sst:{
-title:"Class 9 Social Science",
-chapters:[
-"फ्रांसीसी क्रांति",
-"यूरोप में समाजवाद और रूसी क्रांति",
-"नात्सीवाद और हिटलर का उदय",
-"वन्य समाज और उपनिवेशवाद",
-"आधुनिक विश्व में चरवाहे",
-"भारत - आकार और स्थिति",
-"भारत का भौतिक स्वरूप",
-"अपवाह",
-"जलवायु",
-"प्राकृतिक वनस्पति तथा वन्य प्राणी",
-"जनसंख्या",
-"भारत का लोकतंत्र क्या है?",
-"संविधान निर्माण",
-"चुनावी राजनीति",
-"लोकतांत्रिक अधिकार",
-"पालमपुर गाँव की कहानी",
-"लोग संसाधन के रूप में",
-"गरीबी एक चुनौती",
-"भारत में खाद्य सुरक्षा"
-]},
-
-hindi:{
-title:"Class 9 Hindi",
-chapters:[
-"दो बैलों की कथा",
-"ल्हासा की ओर",
-"उपभोक्तावाद की संस्कृति",
-"साँवले सपनों की याद",
-"नाना साहब की पुत्री देवी मैना को भस्म कर दिया गया",
-"प्रेमचंद के फटे जूते",
-"मेरे बचपन के दिन",
-"एक कुत्ता और एक मैना",
-"साखियाँ एवं सबद",
-"वाख",
-"सवैये",
-"कैदी और कोकिला",
-"ग्राम श्री",
-"चंद्र गहना से लौटती बेर",
-"मेघ आए",
-"यमराज की दिशा"
-]},
-
-english:{
-title:"Class 9 English",
-chapters:[
-"The Fun They Had",
-"The Sound of Music",
-"The Little Girl",
-"A Truly Beautiful Mind",
-"The Snake and the Mirror",
-"My Childhood",
-"No Men Are Foreign",
-"Reach for the Top",
-"The Bond of Love",
-"If I Were You",
-"Packing",
-"Reach for the Top",
-"The Happy Prince",
-"The Last Leaf"
-]}
-
-};
-
-function openSubject(subject){
-
-let obj=data[subject];
-
-let html=`
-<h2 class="title">${obj.title}</h2>
-`;
-
-obj.chapters.forEach(function(chapter,index){
-
-html+=`
-<button class="chapter"
-onclick="openChapter('${subject}',${index})">
-अध्याय ${index+1} - ${chapter}
-</button>
-`;
-
-});
-
-html+=`
-<button class="back" onclick="backHome()">
-← विषयों पर वापस जाएँ
-</button>
-`;
-
-document.getElementById("chapters").innerHTML=html;
-
-document.getElementById("chapters").scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-function openChapter(subject,index){
-
-let chapter=data[subject].chapters[index];
-
-let html=`
-<div class="note">
-
-<h2>अध्याय ${index+1}</h2>
-
-<h3>${chapter}</h3>
-
-<p>
-यह अध्याय StudyPro में पढ़ने के लिए उपलब्ध है।
-</p>
-
-<p>
-यहाँ इस अध्याय के नोट्स, महत्वपूर्ण प्रश्न,
-परिभाषाएँ और अभ्यास प्रश्न जोड़े जा सकते हैं।
-</p>
-
-<h3>महत्वपूर्ण बिंदु</h3>
-
-<p>
-अध्याय को ध्यान से पढ़ें और मुख्य शब्दों तथा
-परिभाषाओं को अपनी कॉपी में लिखें।
-</p>
-
-<h3>अभ्यास</h3>
-
-<p>
-1. इस अध्याय के मुख्य विषय को अपने शब्दों में लिखिए।
-</p>
-
-<p>
-2. अध्याय से संबंधित पाँच महत्वपूर्ण प्रश्न तैयार कीजिए।
-</p>
-
-<button class="back" onclick="openSubject('${subject}')">
-← अध्यायों पर वापस जाएँ
-</button>
-
-</div>
-`;
-
-document.getElementById("chapters").innerHTML=html;
-
-document.getElementById("chapters").scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-function backHome(){
-
-document.getElementById("chapters").innerHTML="";
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-}
-
-</script>
 
 </body>
 </html>
